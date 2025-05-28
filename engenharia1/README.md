@@ -111,7 +111,6 @@ classe LojaEletronicos
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class LojaEletronicos {
     private List<ProdutoEletronico> produtos = new ArrayList<>();
 
@@ -143,7 +142,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LojaEletronicosTeste {
-
     @Test
     void testLojaEletronicos() {
         LojaEletronicos loja = new LojaEletronicos();
