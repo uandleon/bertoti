@@ -82,3 +82,77 @@ Propõe uma reflexão sobre o conceito de entrega: oferecer algo simples, mas fu
 
 #Atividade - 5
 ---
+
+Classe ProdutoEletronico
+--
+
+public class ProdutoEletronico {
+    private String nome;
+    private String codigo;
+
+    public ProdutoEletronico(String nome, String codigo) {
+        this.nome = nome;
+        this.codigo = codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+}
+
+
+
+classe LojaEletronicos
+--
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LojaEletronicos {
+    private List<ProdutoEletronico> produtos = new ArrayList<>();
+
+    public void adicionarProduto(ProdutoEletronico produto) {
+        produtos.add(produto);
+    }
+
+    public List<ProdutoEletronico> getProdutos() {
+        return produtos;
+    }
+
+    public ProdutoEletronico buscarPorCodigo(String codigo) {
+        for (ProdutoEletronico produto : produtos) {
+            if (produto.getCodigo().equals(codigo)) {
+                return produto;
+            }
+        }
+        return null;
+    }
+}
+
+
+
+
+Teste
+--
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class LojaEletronicosTeste {
+
+    @Test
+    void testLojaEletronicos() {
+        LojaEletronicos loja = new LojaEletronicos();
+        loja.adicionarProduto(new ProdutoEletronico("Notebook Dell", "ELEC001"));
+        loja.adicionarProduto(new ProdutoEletronico("Smartphone Samsung", "ELEC002"));
+
+        assertEquals(2, loja.getProdutos().size());
+
+        ProdutoEletronico produto = loja.buscarPorCodigo("ELEC001");
+        assertEquals("Notebook Dell", produto.getNome());
+    }
+}
