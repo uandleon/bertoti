@@ -86,6 +86,9 @@ Propõe uma reflexão sobre o conceito de entrega: oferecer algo simples, mas fu
 Classe ProdutoEletronico
 --
 
+
+
+
 public class ProdutoEletronico {
     private String nome;
     private String codigo;
@@ -109,8 +112,11 @@ public class ProdutoEletronico {
 classe LojaEletronicos
 --
 
+
+
 import java.util.ArrayList;
 import java.util.List;
+
 public class LojaEletronicos {
     private List<ProdutoEletronico> produtos = new ArrayList<>();
 
@@ -138,10 +144,14 @@ public class LojaEletronicos {
 Teste
 --
 
+
+
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LojaEletronicosTeste {
+
     @Test
     void testLojaEletronicos() {
         LojaEletronicos loja = new LojaEletronicos();
