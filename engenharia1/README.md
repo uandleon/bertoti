@@ -49,7 +49,7 @@ Comentário: O texto propõe uma visão ampliada da engenharia de software, que 
 
 
 
-#Atividade 3 - Exemplos de trade-off
+#Atividade 3
 ---
 
 1. Desempenho vs. Legibilidade do Código
